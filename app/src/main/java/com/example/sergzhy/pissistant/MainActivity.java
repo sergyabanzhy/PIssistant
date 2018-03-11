@@ -8,6 +8,8 @@ import android.util.Log;
 
 import java.io.IOException;
 
+import javax.annotation.Nonnull;
+
 import edu.cmu.pocketsphinx.Assets;
 import presenter.IVoiceRecognitionView;
 import presenter.IVoiceRecognizePresenter;
@@ -95,7 +97,7 @@ public class MainActivity extends Activity implements IVoiceRecognitionView {
 
     //TODO Fix permission request. Looks like it is completely incorrect
     @Override
-    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
+    public void onRequestPermissionsResult(int requestCode, @Nonnull String[] permissions, @Nonnull int[] grantResults) {
 
         switch (requestCode) {
             case RECORD_AUDIO_PERMISSION:
